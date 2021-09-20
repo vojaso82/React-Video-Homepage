@@ -1,0 +1,23 @@
+.navbar-div{
+width:100vw;
+display: flex;
+justify-content:space-around;
+align-items:center;
+background-color: transparent;
+position: sticky;
+top:0;
+}
+
+.navbar-div ul{
+width:50%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+list-style: none;
+font-size: 20px;
+}
+
+.navbar-div a{
+text-decoration: none;
+
+}

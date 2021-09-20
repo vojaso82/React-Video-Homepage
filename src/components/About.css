@@ -1,0 +1,10 @@
+.about-div{
+
+width:100vw;
+height:700px;
+margin:0;
+display:flex;
+justify-content: center;
+align-items: center;
+
+}

@@ -1,0 +1,10 @@
+.projects-div{
+/* background-color: darkgreen; */
+display:flex;
+justify-content: center;
+align-items: center;
+width: 100vw;
+height:600px;
+margin:0;
+
+}
