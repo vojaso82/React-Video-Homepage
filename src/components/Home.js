@@ -44,7 +44,7 @@ window.addEventListener('scroll', textTransition)
 
 
 
-console.log(videos[currentVideo])
+// console.log(videos[currentVideo])
 
     return (
         
