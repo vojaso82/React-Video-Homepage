@@ -6,12 +6,7 @@ function Projects() {
         <div id='projects' className='projects-div'>
             <h1>Projects</h1>
             <div>
-                <ul>
-                    <li>Project1</li>
-                    <li>Project2</li>
-                    <li>Project3</li>
-
-                </ul>
+            
             </div>
         </div>
     )

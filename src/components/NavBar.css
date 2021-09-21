@@ -6,7 +6,7 @@ align-items:center;
 background-color: transparent;
 position: sticky;
 top:0;
-}
+}  
 
 .navbar-div ul{
 width:50%;
@@ -18,6 +18,6 @@ font-size: 20px;
 }
 
 .navbar-div a{
+color:rgb(0, 0, 0);
 text-decoration: none;
-
 }
