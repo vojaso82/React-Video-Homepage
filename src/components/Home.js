@@ -18,8 +18,6 @@ useEffect( () => {
       setCurrentVideo(currentVideo => (currentVideo+1)%videos.length)
     }, 5000);
     return () => clearInterval(interval);
-    window.addEventListener('scroll', textTransition)
-    window.removeEventListener('scroll', textTransition)
   }, []);
 
 // console.log(videos[currentVideo])
@@ -35,24 +33,24 @@ if(e.target.id === 'video1'){
 }
 
 const textTransition = () => {
-    if(window.scrollY > 80){
+    if(window.scrollY > 40){
         setChangeText(true);
     }else{
         setChangeText(false);
     }
      }
     
-    window.addEventListener('scroll', textTransition)
+window.addEventListener('scroll', textTransition)
 
 
 
-// console.log(videos[currentVideo])
+console.log(videos[currentVideo])
 
     return (
         
         <div id='home' className='home-div'> 
-        <h1 className={changetext ? 'text-transition1' : ''}>WELCOME TO MIAMI</h1>
-        <h2 className={changetext ? 'text-transition2' : ''}>Magic City</h2> 
+        <h1 className={changetext ? 'text-transition1' : 'text-transition3'}>WELCOME TO MIAMI</h1>
+        <h2 className={changetext ? 'text-transition2' : 'text-transition4'}>Magic City</h2> 
         <video autoPlay loop muted className="video">
             <source src={videos[currentVideo+1]} type='video/mp4' />
            </video> 
