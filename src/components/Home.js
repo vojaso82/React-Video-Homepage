@@ -8,16 +8,18 @@ import Miami3 from './Miami3.mp4'
 let videoArray = [Miami, Miami2, Miami3];
 
 function Home() {
-
 const [videos, setVideos] = useState(videoArray);
 const [currentVideo, setCurrentVideo] = useState(0);
+const [changetext, setChangeText] = useState(false)
+
 
 useEffect( () => {
     const interval = setInterval(() => {   
-      setCurrentVideo(currentVideo => (currentVideo+1)%videos.length);
+      setCurrentVideo(currentVideo => (currentVideo+1)%videos.length)
     }, 5000);
-
     return () => clearInterval(interval);
+    window.addEventListener('scroll', textTransition)
+    window.removeEventListener('scroll', textTransition)
   }, []);
 
 // console.log(videos[currentVideo])
@@ -32,22 +34,28 @@ if(e.target.id === 'video1'){
 }
 }
 
-const Clip = () =>{
-    <video autoPlay loop muted className="video">
-    <source src={videos[currentVideo]} type='video/mp4' />
-   </video>    
-}
+const textTransition = () => {
+    if(window.scrollY > 80){
+        setChangeText(true);
+    }else{
+        setChangeText(false);
+    }
+     }
+    
+    window.addEventListener('scroll', textTransition)
 
-console.log(videos[currentVideo])
+
+
+// console.log(videos[currentVideo])
 
     return (
         
         <div id='home' className='home-div'> 
-        <h1>WELCOME TO MIAMI</h1>
-        <h2>Magic City</h2> 
-        {/* <video autoPlay loop muted className="video">
-            <source src={videos[currentVideo]} type='video/mp4' />
-           </video>  */}
+        <h1 className={changetext ? 'text-transition1' : ''}>WELCOME TO MIAMI</h1>
+        <h2 className={changetext ? 'text-transition2' : ''}>Magic City</h2> 
+        <video autoPlay loop muted className="video">
+            <source src={videos[currentVideo+1]} type='video/mp4' />
+           </video> 
            <div className='buttons'>
                <button id="video1" onClick={(e)=>changeVideo(e)}></button>
                <button id="video2" onClick={(e)=>changeVideo(e)}></button>
