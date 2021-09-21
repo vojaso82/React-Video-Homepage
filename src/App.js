@@ -11,12 +11,12 @@ function App() {
 
 
   return (
-    <BrowserRouter>
+    <div className='app'>
       <NavBar/>
       <Home/>
       <About/>
       <Projects/>
-    </BrowserRouter>
+    </div>
   );
 }
 
