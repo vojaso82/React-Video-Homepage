@@ -12,7 +12,7 @@ z-index:10;
 }  
 
 .navbar-color{
-background-color:rgba(41, 40, 40,0.8);
+background-color:rgba(255, 254, 254, 0.99);
 height:60px;
 transition: all 0.5s ease-in-out; 
 }
@@ -20,14 +20,18 @@ transition: all 0.5s ease-in-out;
 .navbar-div ul{
 width:50%;
 display: flex;
-justify-content: space-between;
+justify-content: space-evenly;
 align-items: center;
 list-style: none;
 font-size: 20px;
-
+padding-left:50px;
 }
 
 .navbar-div a{
-color:rgb(255, 255, 255);
+color:rgb(0, 0, 0);
 text-decoration: none;
+}
+
+.logo{
+    margin-left:-6%;
 }

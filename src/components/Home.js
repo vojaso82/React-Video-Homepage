@@ -38,7 +38,7 @@ if(e.target.id === 'video1'){
 }
 
 const textTransition = () => {
-    if(window.scrollY > 40){
+    if(window.scrollY > 80){
         setChangeText(true);
     }else{
         setChangeText(false);
@@ -57,7 +57,7 @@ window.addEventListener('scroll', textTransition)
         <video autoPlay loop muted className="video">
             <source src={videos[1]} type='video/mp4' />
            </video> 
-           <p style={{background:'red'}}>{videos[currentVideo]}</p>
+           {/* <p style={{background:'red'}}>{videos[currentVideo]}</p> */}
            <div className='buttons'>
                <button id="video1" onClick={(e)=>changeVideo(e)}></button>
                <button id="video2" onClick={(e)=>changeVideo(e)}></button>
