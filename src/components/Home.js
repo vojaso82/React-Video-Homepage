@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState,  useRef } from 'react'
 import './Home.css'
 import Miami from './Miami.mp4'
 import Miami2 from './Miami2.mp4'
@@ -12,13 +12,18 @@ const [videos, setVideos] = useState(videoArray);
 const [currentVideo, setCurrentVideo] = useState(0);
 const [changetext, setChangeText] = useState(false)
 
+// const vidRef = useRef(null)
+// const handlePlayVideo = () => {
+//     vidRef.current.play();
+//   }
 
 useEffect( () => {
     const interval = setInterval(() => {   
       setCurrentVideo(currentVideo => (currentVideo+1)%videos.length)
+      
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [videos]);
 
 // console.log(videos[currentVideo])
 
@@ -44,16 +49,15 @@ window.addEventListener('scroll', textTransition)
 
 
 
-// console.log(videos[currentVideo])
-
     return (
         
         <div id='home' className='home-div'> 
         <h1 className={changetext ? 'text-transition1' : 'text-transition3'}>WELCOME TO MIAMI</h1>
         <h2 className={changetext ? 'text-transition2' : 'text-transition4'}>Magic City</h2> 
         <video autoPlay loop muted className="video">
-            <source src={videos[currentVideo+1]} type='video/mp4' />
+            <source src={videos[1]} type='video/mp4' />
            </video> 
+           <p style={{background:'red'}}>{videos[currentVideo]}</p>
            <div className='buttons'>
                <button id="video1" onClick={(e)=>changeVideo(e)}></button>
                <button id="video2" onClick={(e)=>changeVideo(e)}></button>
