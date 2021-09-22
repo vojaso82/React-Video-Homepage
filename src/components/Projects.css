@@ -27,10 +27,41 @@ display: flex;
 flex-wrap: wrap;
 }
 
-.all-services div{
-width:33%;
-display:flex;
-flex-direction: column;
-justify-content: center;
+.box-slide{
+    opacity:1;
+    transform:translateY(-30%);
+    /* transition: all 1.5s ease-in-out; */
+    width:33%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center; 
+}
 
+.box-down{
+    width:33%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center; 
+    /* transform:translateY(30%); */
+    opacity:0;
+    transition: all 1.5s ease-in-out;
+}
+
+#box1{
+    transition: all 1s ease-in-out;  
+}
+#box2{
+    transition: all 1s ease-in-out 0.1s;  
+}
+#box3{
+    transition: all 1s ease-in-out 0.2s;  
+}
+#box4{
+    transition: all 1s ease-in-out 0.5s;  
+}
+#box5{
+    transition: all 1s ease-in-out 0.6s;  
+}
+#box6{
+    transition: all 1s ease-in-out 0.7s;  
 }

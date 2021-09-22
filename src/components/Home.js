@@ -12,10 +12,6 @@ const [videos, setVideos] = useState(videoArray);
 const [currentVideo, setCurrentVideo] = useState(0);
 const [changetext, setChangeText] = useState(false)
 
-// const vidRef = useRef(null)
-// const handlePlayVideo = () => {
-//     vidRef.current.play();
-//   }
 
 useEffect( () => {
     const interval = setInterval(() => {   

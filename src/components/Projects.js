@@ -9,39 +9,26 @@ import social from './social.png'
 
 function Projects() {
 
-const [scroll1, setScroll1] = useState(window.scrollY)
-const [scroll2, setScroll2] = useState(window.scrollY)
+const [onscroll, setOnscroll] = useState(false)
 
 
 //SCROLLS on Y MIAMI PICTURES
-const handleScroll1 = () => {
-    if(window.scrollY < 1300){
-        setScroll1(window.scrollY)
+const handleScroll = () => {
+    if(window.scrollY > 1200){
+        setOnscroll(true)
     }else{
-        setScroll1(980)
-    }
-    }
-    
-const handleScroll2 = () => {
-        if(window.scrollY < 1550){
-            setScroll2(window.scrollY)
-        }else{
-            setScroll2(980)
-    }
-    }
+        setOnscroll(false)
+}
+}
+
 useEffect (() => {
-     window.addEventListener('scroll', handleScroll1)
+    window.addEventListener('scroll', handleScroll)
     return() => {
-     window.removeEventListener('scroll', handleScroll1)
+     window.removeEventListener('scroll', handleScroll)
      }
  },[])
-
- useEffect (() => {
-    window.addEventListener('scroll', handleScroll2)
-   return() => {
-    window.removeEventListener('scroll', handleScroll2)
-    }
-},[])
+ window.addEventListener('scroll', handleScroll)
+ console.log(onscroll, window.scrollY)
 
 
 
@@ -54,32 +41,32 @@ useEffect (() => {
              assess how you’re doing and help you perform even better in the future. </p>
             </div>
             <div className='all-services'>
-            <div style={{transform:`translateY(${(scroll1-980)}px)`, transition:'all 0.9s linear'}}>
+            <div id='box1'className={onscroll ? 'box-slide' : 'box-down'}>
                 <img src={media} style={{width:'40px'}}/>
                 <h3>Advertising</h3>
                 <p>Great advertising not only sells, but compels. By combining unique cultural insights with big creative, we build award-winning campaigns that drive sales.</p>
             </div>
-            <div style={{transform:`translateY(${(scroll1-980)}px)`, transition:'all 0.9s linear'}}>
+            <div id='box2' className={onscroll ? 'box-slide' : 'box-down'}>
                 <img src={branding} style={{width:'40px'}}/>
                 <h3>Branding</h3>
                 <p>Great advertising not only sells, but compels. By combining unique cultural insights with big creative, we build award-winning campaigns that drive sales.</p>
             </div>
-            <div style={{transform:`translateY(${(scroll1-980)}px)`, transition:'all 0.9s linear'}}>
+            <div id='box3' className={onscroll ? 'box-slide' : 'box-down'}>
                 <img src={media} style={{width:'40px'}}/>
                 <h3>Media</h3>
                 <p>Great advertising not only sells, but compels. By combining unique cultural insights with big creative, we build award-winning campaigns that drive sales.</p>
             </div>
-            <div style={{transform:`translateY(${(scroll2-980)}px)`, transition:'all 0.9s linear'}}>
+            <div  id='box4' className={onscroll ? 'box-slide' : 'box-down'}>
                 <img src={events} style={{width:'40px'}}/>
                 <h3>Events </h3>
                 <p>Great advertising not only sells, but compels. By combining unique cultural insights with big creative, we build award-winning campaigns that drive sales.</p>
             </div>
-            <div style={{transform:`translateY(${(scroll2-980)}px)`, transition:'all 0.9s linear'}}>
+            <div  id='box5' className={onscroll ? 'box-slide' : 'box-down'}>
                 <img src={production} style={{width:'40px'}}/>
                 <h3>Production</h3>
                 <p>Great advertising not only sells, but compels. By combining unique cultural insights with big creative, we build award-winning campaigns that drive sales.</p>
             </div>
-            <div style={{transform:`translateY(${(scroll2-980)}px)`, transition:'all 0.9s linear'}}>
+            <div  id='box6' className={onscroll ? 'box-slide' : 'box-down'}>
                 <img src={social} style={{width:'40px'}}/>
                 <h3>Social</h3>
                 <p>Great advertising not only sells, but compels. By combining unique cultural insights with big creative, we build award-winning campaigns that drive sales.</p>
