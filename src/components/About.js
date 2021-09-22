@@ -12,14 +12,14 @@ const [scroll, setScroll] = useState(window.scrollY)
 
 //SCROLLS DOWN H1 DIV - MIAMI ABOUT
 const textTransition = () => {
-    if(window.scrollY > 100){
+    if(window.scrollY > 250){
         setMiamiabout(true);
     }else{
         setMiamiabout(false);
     }
      }
 
-//SCROLLS on Y MIAMI PICTURES
+//SCROLLS on X MIAMI PICTURES
 const handleScroll = () => {
 if(window.scrollY < 980){
     setScroll(window.scrollY)
@@ -28,16 +28,12 @@ if(window.scrollY < 980){
 }
 }
 
-
-
 useEffect (() => {
     window.addEventListener('scroll', handleScroll)
     return() => {
     window.removeEventListener('scroll', handleScroll)
     }
 },[])
-
-
 
 window.addEventListener('scroll', textTransition)
 
