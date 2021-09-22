@@ -2,7 +2,7 @@
 width:100%;
 height:60px;
 display: flex;
-justify-content:space-around;
+justify-content:space-between;
 align-items:center;
 background-color:transparent;
 position: sticky;
@@ -18,13 +18,14 @@ transition: all 0.5s ease-in-out;
 }
 
 .navbar-div ul{
-width:50%;
+width:25%;
 display: flex;
-justify-content: space-evenly;
+justify-content:space-around;
 align-items: center;
 list-style: none;
 font-size: 20px;
-padding-left:50px;
+margin-right:4%;
+min-width:300px;
 }
 
 .navbar-div a{
@@ -33,5 +34,5 @@ text-decoration: none;
 }
 
 .logo{
-    margin-left:-6%;
+margin-left:4%;
 }

@@ -25,6 +25,11 @@ transform:translateY(-10%);
 transition: all 1.0s ease-in-out;
 }
 
+.miami-h1 h1{
+    font-weight: 900;
+}
+
+
 .miami-2{
 transform:translateY(90%);
 opacity:0;
@@ -41,7 +46,7 @@ transition: all 1.0s ease-in-out;
 
 .buttons-about button{
     /* all:unset; */
-    color:rgb(214, 32, 32);
+    color:rgb(255, 255, 255);
     width:130px;
     border-color: rgb(255, 255, 255);
     background: none;

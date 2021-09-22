@@ -52,8 +52,10 @@ window.addEventListener('scroll', textTransition)
     return (
         
         <div id='home' className='home-div'> 
+        <div className='intro-text'>
         <h1 className={changetext ? 'text-transition1' : 'text-transition3'}>WELCOME TO MIAMI</h1>
-        <h2 className={changetext ? 'text-transition2' : 'text-transition4'}>Magic City</h2> 
+        <h2 className={changetext ? 'text-transition2' : 'text-transition4'}>MAGIC CITY</h2> 
+        </div>
         <video autoPlay loop muted className="video">
             <source src={videos[1]} type='video/mp4' />
            </video> 
