@@ -41,7 +41,7 @@ window.addEventListener('scroll', textTransition)
 
     return (
         <div id='about' className='about-div'>
-        <div className={miamiabout ? 'miami-h1' : 'miami-2'}>
+        <div className={miamiabout ? 'miami-h1' : 'miami-2 miami-h1'}>
             <h1>MIAMI ABOUT</h1>
             <p style={{fontSize:'18px', textAlign:'center'}}>The city of Miami is well known for beaches such as Miami Beach and South Beach.<br/>
              As a result, the metropolitan area of Miami, are great places for water sports or simply building sandcastles.</p>

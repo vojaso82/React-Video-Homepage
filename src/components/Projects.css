@@ -14,13 +14,14 @@ font-weight: 900;
 font-size: 70px;
 margin-top:0px;
 }
+
 .services h1, .services p{
 text-align: center;
 margin-bottom: 1%;
 }
 
 .all-services{
-margin-bottom:50px;
+margin-bottom:0px;
 width:60%;
 height:65%;
 display: flex;
@@ -51,10 +52,10 @@ flex-wrap: wrap;
     transition: all 1s ease-in-out;  
 }
 #box2{
-    transition: all 1s ease-in-out 0.1s;  
+    transition: all 1s ease-in-out 0.2s;  
 }
 #box3{
-    transition: all 1s ease-in-out 0.2s;  
+    transition: all 1s ease-in-out 0.3s;  
 }
 #box4{
     transition: all 1s ease-in-out 0.5s;  

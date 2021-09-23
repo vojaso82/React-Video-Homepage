@@ -5,5 +5,13 @@ body {
   font-family: "Roboto", sans-serif;
   height:max-content;
   overflow: auto;
+ 
+}
+
+.app{
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
 }
 

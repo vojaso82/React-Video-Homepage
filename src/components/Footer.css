@@ -1,4 +1,35 @@
 .footer-div{
     background-color: rgb(49, 49, 49);
     height:10vh;
+    margin:0;
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-div button{
+    background-color: floralwhite;
+    height:60px;
+    width:60px;
+    border: none;
+    font-size: 25px;
+    padding-top:8px;
+}
+
+.footer-div button:hover{
+    cursor: pointer;
+}
+
+.footer-div p{
+   color: floralwhite;
+}
+.div1{
+    
+    width:25%;
+    display:flex;
+    justify-content:space-around;
+    flex-direction: row;
+    max-width: 25%;
+
 }

@@ -14,7 +14,7 @@ const [onscroll, setOnscroll] = useState(false)
 
 //SCROLLS on Y MIAMI PICTURES
 const handleScroll = () => {
-    if(window.scrollY > 1200){
+    if(window.scrollY > 1250){
         setOnscroll(true)
     }else{
         setOnscroll(false)
@@ -36,7 +36,7 @@ useEffect (() => {
         <div id='projects' className='projects-div'>
             <div className='services'>
             <h1>SERVICES</h1>
-            <p>BSI offers a full spectrum of services to help organizations work better. <br/>
+            <p>City of Miami offers a full spectrum of services to help organizations work better. <br/>
              We create standards of excellence, train your people to work in more effective <br/>ways, 
              assess how you’re doing and help you perform even better in the future. </p>
             </div>
