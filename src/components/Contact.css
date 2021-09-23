@@ -8,14 +8,14 @@
     margin:0;
     color:white;
     position:relative;
-    padding-bottom:80px;
+    padding-bottom:70px;
 }
 
 .contact-div h1{
     padding-top:40px;
     position:absolute;
     align-self:flex-start;
-    font-size: 60px;
+    font-size: 80px;
     font-weight: 900;
     
 }

@@ -27,16 +27,16 @@ window.addEventListener('scroll', navbarColorChange)
             </div>
             <ul>
                 <li className='links'>
-                <HashLink smooth to={'/#home'}>Home</HashLink>
+                <HashLink smooth to={'/#home'}>HOME</HashLink>
                 </li>
                 <li className='links'>
-                <HashLink smooth to={'/#about'}>About</HashLink>
+                <HashLink smooth to={'/#about'}>ABOUT</HashLink>
                 </li>
                 <li className='links'>
-                <HashLink smooth to={'/#projects'}>Projects</HashLink>
+                <HashLink smooth to={'/#projects'}>SERVICES</HashLink>
                 </li>
                 <li className='links'>
-                <HashLink smooth to={'/#contact'}>Contact</HashLink>
+                <HashLink smooth to={'/#contact'}>CONTACT</HashLink>
                 </li>
             </ul>
         </nav>
