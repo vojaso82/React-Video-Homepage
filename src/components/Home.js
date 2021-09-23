@@ -12,17 +12,18 @@ const [videos, setVideos] = useState(videoArray);
 const [currentVideo, setCurrentVideo] = useState(0);
 const [changetext, setChangeText] = useState(false)
 
-
+//CHANGE VIDEOS FROM ARRAY EVERY 5 SECONDS
 useEffect( () => {
+
     const interval = setInterval(() => {   
-      setCurrentVideo(currentVideo => (currentVideo+1)%videos.length)
-      
+      setCurrentVideo(currentVideo => (currentVideo+1)%videos.length)  
     }, 5000);
     return () => clearInterval(interval);
   }, [videos]);
 
-// console.log(videos[currentVideo])
+  console.log(videos[currentVideo])
 
+//PLAY NEXT VIDEO ON CLICK
 const changeVideo = (e) => {
 if(e.target.id === 'video1'){
     setCurrentVideo(0)
@@ -33,27 +34,26 @@ if(e.target.id === 'video1'){
 }
 }
 
+//TEXT TRANSITION
 const textTransition = () => {
     if(window.scrollY > 80){
         setChangeText(true);
     }else{
         setChangeText(false);
     }
-     }
-    
+     }   
 window.addEventListener('scroll', textTransition)
-
 
 
     return (
         
         <div id='home' className='home-div'> 
         <div className='intro-text'>
-        <h1 className={changetext ? 'text-transition1' : 'text-transition3'}>WELCOME.TO.MIAMI</h1>
+        <h1 className={changetext ? 'text-transition1' : 'text-transition3'}>WELCOME. TO. MIAMI.</h1>
         {/* <h2 className={changetext ? 'text-transition2' : 'text-transition4'}>MAGIC CITY</h2>  */}
         </div>
         <video autoPlay loop muted className="video">
-            <source src={videos[1]} type='video/mp4' />
+            <source src={videos[currentVideo]} type='video/mp4' />
            </video> 
            {/* <p style={{background:'red'}}>{videos[currentVideo]}</p> */}
            <div className='buttons'>

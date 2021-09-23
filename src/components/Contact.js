@@ -11,7 +11,7 @@ function Contact() {
             
             <div className='google-map-div'>
             <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=701%20S%20Miami%20Ave,%20Miami,%20FL%2033131+()&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-                  allowfullscreen     
+                     
              ></iframe>
             </div>
             <div className='informations'>
@@ -22,7 +22,7 @@ function Contact() {
                 <p>OR EMAIL</p>
                 <p style={{fontWeight:'bold'}}>General Inquiries</p>
                 <a href="email@example.com">email@example.com</a>
-                <p style={{fontWeight:'bold'}}>General Inquiries</p>
+                <p style={{fontWeight:'bold'}}>Customer support</p>
                 <a href="email@example.com">email@example.com</a>
 
             </div>  

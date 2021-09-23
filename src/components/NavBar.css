@@ -33,6 +33,11 @@ color:rgb(29, 29, 29);
 text-decoration: none;
 }
 
+.navbar-div a:hover{
+    color:rgb(180, 162, 0);
+    text-decoration: none;
+}
+
 .logo{
 margin-left:4%;
 }
