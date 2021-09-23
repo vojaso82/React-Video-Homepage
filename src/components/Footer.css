@@ -5,12 +5,12 @@
     width:100%;
     display:flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .footer-div button{
     background-color: floralwhite;
-    height:60px;
+    height:45px;
     width:60px;
     border: none;
     font-size: 25px;
@@ -24,12 +24,33 @@
 .footer-div p{
    color: floralwhite;
 }
-.div1{
-    
+
+.div1{  
     width:25%;
     display:flex;
     justify-content:space-around;
     flex-direction: row;
     max-width: 25%;
+}
 
+.social-icons{
+height:40px;
+width:200px;
+display:flex;
+justify-content: space-around;
+align-items: center;
+}
+
+.social-icons a{
+color:rgb(240, 240, 240);
+display:flex;
+justify-content: center;
+align-items: center;
+height:40px;
+width: 40px;
+font-size: 30px;
+}
+
+.social-icons .icons{
+    font-size: 28px;   
 }
