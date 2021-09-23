@@ -22,9 +22,9 @@ window.addEventListener('scroll', navbarColorChange)
 
     return (
         <nav className={navbar ? 'navbar-color navbar-div' : 'navbar-div'}>
-            <div className="logo">
-                <img src={MiamiLogo} style={{width:'180px'}}/>
-            </div>
+            <HashLink smooth to={'/#home'} className="logo">
+                <img src={MiamiLogo} style={{width:'180px'}} />
+            </HashLink>
             <ul>
                 <li className='links'>
                 <HashLink smooth to={'/#home'}>HOME</HashLink>

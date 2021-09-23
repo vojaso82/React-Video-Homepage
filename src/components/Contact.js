@@ -1,13 +1,49 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Contact.css';
 
 
 
 function Contact() {
 
+    const [onscroll, setOnscroll] = useState(false)
+
+
+const handleScroll = () => {
+    if(window.scrollY > 2000){
+        setOnscroll(true)
+    }else{
+        setOnscroll(false)
+}
+}
+
+
+useEffect (() => {
+    window.addEventListener('scroll', handleScroll)
+    return() => {
+     window.removeEventListener('scroll', handleScroll)
+     }
+ },[])
+ window.addEventListener('scroll', handleScroll)
+console.log(onscroll, window.scrollY)
+
+
     return (
         <div id='contact' className='contact-div'>
-            <h1>GET IN TOUCH</h1>
+            <div className='getintouch'>
+            <span id='letter1'className={onscroll ? 'no-letter' : 'show-letter'}>G</span>
+            <span id='letter2'className={onscroll ? 'no-letter' : 'show-letter'}>E</span>
+            <span id='letter3'className={onscroll ? 'no-letter' : 'show-letter'}>T     </span>
+            
+            <span id='letter4'className={onscroll ? 'no-letter' : 'show-letter'}>I</span>
+            <span id='letter5'className={onscroll ? 'no-letter' : 'show-letter'}>N     </span>
+
+            <span id='letter6'className={onscroll ? 'no-letter' : 'show-letter'}>T</span>
+            <span id='letter7'className={onscroll ? 'no-letter' : 'show-letter'}>O</span>
+            <span id='letter8'className={onscroll ? 'no-letter' : 'show-letter'}>U</span>
+            <span id='letter9'className={onscroll ? 'no-letter' : 'show-letter'}>C</span>
+            <span id='letter10'className={onscroll ? 'no-letter' : 'show-letter'}>H</span>
+
+            </div>
             
             <div className='google-map-div'>
             <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=701%20S%20Miami%20Ave,%20Miami,%20FL%2033131+()&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"

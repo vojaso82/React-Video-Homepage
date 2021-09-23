@@ -14,7 +14,7 @@ const [onscroll, setOnscroll] = useState(false)
 
 //SCROLLS on Y MIAMI PICTURES
 const handleScroll = () => {
-    if(window.scrollY > 1250){
+    if(window.scrollY > 1450){
         setOnscroll(true)
     }else{
         setOnscroll(false)

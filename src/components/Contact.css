@@ -12,12 +12,20 @@
 }
 
 .contact-div h1{
-    padding-top:40px;
+   
+    /* padding-top:00px;
+    position:absolute;
+    align-self:flex-start;
+    font-size: 80px;
+    font-weight: 900; */
+}
+
+.getintouch{
+    padding-top:50px;
     position:absolute;
     align-self:flex-start;
     font-size: 80px;
     font-weight: 900;
-    
 }
 
 .contact-div1{
@@ -56,4 +64,55 @@
 .informations a:hover{
     text-decoration: underline;
     
+}
+
+
+.no-letter{
+    opacity:1;
+}
+
+.show-letter{
+opacity: 0;
+}
+
+
+#letter1{
+
+}
+
+#letter2{
+    transition: all 1s ease-in-out;  
+}
+
+#letter3{
+    transition: all 1s ease-in-out 0.1s;  
+}
+
+#letter4{
+    transition: all 1s ease-in-out 0.2s;  
+}
+
+#letter5{
+    transition: all 1s ease-in-out 0.3s;  
+}
+
+#letter6{
+    transition: all 1s ease-in-out 0.4s;  
+}
+
+#letter7{
+    transition: all 1s ease-in-out 0.5s;  
+}
+
+
+#letter8{
+    transition: all 1s ease-in-out 0.6s;  
+}
+
+#letter9{
+    transition: all 1s ease-in-out 0.7s;  
+}
+
+#letter10{
+    transition: all 1s ease-in-out 0.8s;  
 }

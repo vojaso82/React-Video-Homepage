@@ -32,7 +32,10 @@ if(e.target.id === 'video1'){
 }else if(e.target.id === 'video3'){
     setCurrentVideo(2)
 }
+console.log(e.target.id)
 }
+
+
 
 //TEXT TRANSITION
 const textTransition = () => {
