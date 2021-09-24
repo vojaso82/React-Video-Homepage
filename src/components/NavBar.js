@@ -61,7 +61,9 @@ console.log(navbar)
             </HashLink>
             
             <ul style={toggle ? {display:'flex'} : {display:'none'}}>
-                <motion.li
+        
+                <motion.li 
+                
                 initial={animateFrom}
                 animate={animateTo}
                 transition={{delay:0.05}}
@@ -69,7 +71,7 @@ console.log(navbar)
                 className='links'>
                 <HashLink smooth to={'/#home'}>HOME</HashLink>
                 </motion.li>
-
+                
                 <motion.li
                 initial={animateFrom}
                 animate={animateTo}
@@ -78,7 +80,7 @@ console.log(navbar)
                  className='links'>
                 <HashLink smooth to={'/#about'}>ABOUT</HashLink>
                 </motion.li>
-
+                
                 <motion.li
                 initial={animateFrom}
                 animate={animateTo}
@@ -87,7 +89,7 @@ console.log(navbar)
                 className='links'>
                 <HashLink smooth to={'/#projects'}>SERVICES</HashLink>
                 </motion.li>
-
+                
                 <motion.li
                 initial={animateFrom}
                 animate={animateTo}
@@ -96,6 +98,7 @@ console.log(navbar)
                 className='links'>
                 <HashLink smooth to={'/#contact'}>CONTACT</HashLink>
                 </motion.li>
+                
             </ul>
         </nav>
     )
