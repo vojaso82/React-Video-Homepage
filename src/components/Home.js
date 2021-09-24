@@ -32,7 +32,7 @@ useEffect( () => {
     return () => clearInterval(interval);
   }, [videos]);
 
-  console.log(videos[currentVideo])
+//   console.log(videos[currentVideo])
 
 //PLAY NEXT VIDEO ON CLICK
 const changeVideo = (e) => {
@@ -43,7 +43,7 @@ if(e.target.id === 'video1'){
 }else if(e.target.id === 'video3'){
     setCurrentVideo(2)
 }
-console.log(e.target.id)
+// console.log(e.target.id)
 }
 
 //TEXT TRANSITION

@@ -9,6 +9,8 @@ position: sticky;
 top:0;
 transition: all 0.5s ease-in-out; 
 z-index:10;
+
+
 }  
 
 .navbar-color{
@@ -25,7 +27,7 @@ align-items: center;
 list-style: none;
 font-size: 20px;
 margin-right:4%;
-min-width:300px;
+min-width:350px;
 }
 
 .navbar-div a{
@@ -41,3 +43,76 @@ text-decoration: none;
 .logo{
 margin-left:4%;
 }
+.navbar-div ul li:hover{
+    text-decoration: underline;
+    }
+
+
+#menuToggle {
+    cursor: pointer;
+    width: 50px;
+    height: 40px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    right:4%;
+  }
+  
+#menuToggle input {
+    display: none;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0; /* hide input */
+    z-index: 1; /* top of the menu */
+  }
+  
+  #menuToggle span {
+    width: 40px;
+    height: 3px;
+    margin-bottom: 7px;
+    background: #000000;
+    border-radius: 6px;
+    -webkit-transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
+    -moz-transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
+    -ms-transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
+    -o-transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
+    transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
+  }
+  
+  #spanx1 {
+    background-color: #363636;
+    transform: rotate(45deg) translateX(14px) translateY(6px);
+  }
+  #spanx2 {
+    background-color: #363636;
+    transform: rotate(495deg) translateX(-1px) translateY(-7px);
+  }
+  #spanx3 {
+    background-color: #000000;
+    transform: rotate(45deg);
+    opacity: 0;
+  }
+
+  @media (max-width: 800px){
+    #menuToggle {
+        display: flex;
+      }
+      .navbar-div ul{
+        top:40px;
+        background-color: rgb(255, 255, 255);
+        width:100%;
+        height:350px;
+        position:absolute;
+        flex-direction: column;
+        }
+        .navbar-div ul li:hover{
+        text-decoration: underline;
+        }
+        .navbar-div{
+            background-color:rgba(255, 254, 254, 0.99);
+        }
+  }
