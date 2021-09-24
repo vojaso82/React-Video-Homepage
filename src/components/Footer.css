@@ -22,8 +22,8 @@
 }
 
 .footer-div p{
-   color: floralwhite;
-}
+    color: floralwhite;
+ }
 
 .div1{  
     width:25%;
@@ -31,6 +31,7 @@
     justify-content:space-around;
     flex-direction: row;
     max-width: 25%;
+    min-width: 300px;
 }
 
 .social-icons{
@@ -53,4 +54,24 @@ font-size: 30px;
 
 .social-icons .icons{
     font-size: 28px;   
+}
+
+@media (max-width:1400px){
+    .footer-div p{
+        font-size: 10px;;
+     }
+     .footer-div button{
+       
+        height:35px;
+        width:40px;
+        border: none;
+        font-size: 15px;
+       
+    }   
+    .social-icons{
+        height:40px;
+        width:120px;
+      
+        }
+        
 }

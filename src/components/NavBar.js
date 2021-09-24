@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import './NavBar.css'
 import { HashLink } from 'react-router-hash-link';
-import MiamiLogo from './MiamiLogo2.png'
+import MiamiLogo from './MiamiLogo2.png';
+import { motion } from 'framer-motion';
 
-function NavBar() {
+function NavBar(props) {
 
 const [navbar, setNavbar] = useState(false)
 const [toggle, setToggle] = useState(true);
+
+//FRAMER MOTION
+const animateFrom = {opacity:0, y:-50}
+const animateTo = {opacity:1, y:0}
 
 
 const navbarColorChange = () => {
@@ -56,18 +61,41 @@ console.log(navbar)
             </HashLink>
             
             <ul style={toggle ? {display:'flex'} : {display:'none'}}>
-                <li onClick={()=>handleBurgerMenu()} className='links'>
+                <motion.li
+                initial={animateFrom}
+                animate={animateTo}
+                transition={{delay:0.05}}
+                onClick={()=>handleBurgerMenu()}
+                className='links'>
                 <HashLink smooth to={'/#home'}>HOME</HashLink>
-                </li>
-                <li onClick={()=>handleBurgerMenu()} className='links'>
+                </motion.li>
+
+                <motion.li
+                initial={animateFrom}
+                animate={animateTo}
+                transition={{delay:0.10}}
+                onClick={()=>handleBurgerMenu()}
+                 className='links'>
                 <HashLink smooth to={'/#about'}>ABOUT</HashLink>
-                </li>
-                <li onClick={()=>handleBurgerMenu()} className='links'>
+                </motion.li>
+
+                <motion.li
+                initial={animateFrom}
+                animate={animateTo}
+                transition={{delay:0.20}}
+                onClick={()=>handleBurgerMenu()}
+                className='links'>
                 <HashLink smooth to={'/#projects'}>SERVICES</HashLink>
-                </li>
-                <li onClick={()=>handleBurgerMenu()} className='links'>
+                </motion.li>
+
+                <motion.li
+                initial={animateFrom}
+                animate={animateTo}
+                transition={{delay:0.30}}
+                onClick={()=>handleBurgerMenu()}
+                className='links'>
                 <HashLink smooth to={'/#contact'}>CONTACT</HashLink>
-                </li>
+                </motion.li>
             </ul>
         </nav>
     )

@@ -7,10 +7,8 @@ align-items:center;
 background-color:transparent;
 position: sticky;
 top:0;
-transition: all 0.5s ease-in-out; 
+transition: all 1s ease-in-out; 
 z-index:10;
-
-
 }  
 
 .navbar-color{
@@ -20,14 +18,16 @@ transition: all 0.5s ease-in-out;
 }
 
 .navbar-div ul{
+padding-bottom:0px;
+height:15px;
 width:25%;
 display: flex;
 justify-content:space-around;
 align-items: center;
 list-style: none;
 font-size: 20px;
-margin-right:4%;
-min-width:350px;
+margin-right:3%;
+min-width:400px;
 }
 
 .navbar-div a{
@@ -43,9 +43,6 @@ text-decoration: none;
 .logo{
 margin-left:4%;
 }
-.navbar-div ul li:hover{
-    text-decoration: underline;
-    }
 
 
 #menuToggle {
@@ -66,8 +63,8 @@ margin-left:4%;
     height: 50px;
     position: absolute;
     cursor: pointer;
-    opacity: 0; /* hide input */
-    z-index: 1; /* top of the menu */
+    opacity: 0; 
+    z-index: 1; 
   }
   
   #menuToggle span {
@@ -103,15 +100,15 @@ margin-left:4%;
       }
       .navbar-div ul{
         top:40px;
-        background-color: rgb(255, 255, 255);
-        width:100%;
-        height:350px;
+        background-color: rgb(134, 65, 65);
+        width:95%;
+        height:300px;
         position:absolute;
         flex-direction: column;
+    
+
         }
-        .navbar-div ul li:hover{
-        text-decoration: underline;
-        }
+      
         .navbar-div{
             background-color:rgba(255, 254, 254, 0.99);
         }
