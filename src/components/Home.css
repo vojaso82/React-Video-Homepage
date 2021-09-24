@@ -89,4 +89,23 @@ transition: all 1.0s ease-in-out;
 opacity:1;
 transition: all 1.0s ease-in-out;
 }
-       
+
+@media(max-width:1700px){
+    .home-div h1, .home-div h2{ 
+        font-size: 50px;
+        font-weight: 900;
+        
+        }
+
+}
+
+@media(max-width:800px){
+    .home-div h1, .home-div h2{ 
+        font-size: 50px;
+        font-weight: 900;
+        height:200px;
+        width:300px;
+        
+        }
+
+}
