@@ -22,12 +22,7 @@ width:37%;
 height:40%;
 opacity:1;
 transform:translateY(-10%);
-transition: all 1.0s ease-in-out;
-}
-
-.miami-h1 h1{
-font-weight: 900;
-opacity:1;
+transition: all 1.5s ease-in-out;
 }
 
 
@@ -39,6 +34,11 @@ text-align: center;
 font-weight: 900;
 }
 
+.miami-h1 h1{
+    font-weight: 900;
+    opacity:1;
+    }
+    
 .buttons-about{
     display:flex;
     justify-content: space-around;
@@ -78,7 +78,7 @@ height:350px;
 
 .so-miami1{
     /* transform:translateX(-150%); */
-transition: all 1.0s ease-in-out;
+transition: all 1.0s ease-in-out 1s;
 }
 
 .slide-items{

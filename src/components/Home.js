@@ -1,4 +1,4 @@
-import React, { useEffect, useState,  useRef } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import './Home.css'
 import Miami from './Miami.mp4'
 import Miami2 from './Miami2.mp4'
@@ -11,6 +11,17 @@ function Home() {
 const [videos, setVideos] = useState(videoArray);
 const [currentVideo, setCurrentVideo] = useState(0);
 const [changetext, setChangeText] = useState(false)
+
+// const videoRef = useRef(null);
+
+// function playVideo() {
+//     videoRef.current.currentSrc = 'http://localhost:3000/static/media/Miami3.7cab7547.mp4'
+//     videoRef.current.play();
+// }  
+
+// console.log(videoRef)
+
+// http://localhost:3000/static/media/Miami3.7cab7547.mp4
 
 //CHANGE VIDEOS FROM ARRAY EVERY 5 SECONDS
 useEffect( () => {
@@ -35,8 +46,6 @@ if(e.target.id === 'video1'){
 console.log(e.target.id)
 }
 
-
-
 //TEXT TRANSITION
 const textTransition = () => {
     if(window.scrollY > 80){
@@ -46,6 +55,9 @@ const textTransition = () => {
     }
      }   
 window.addEventListener('scroll', textTransition)
+
+
+
 
 
     return (
@@ -60,9 +72,9 @@ window.addEventListener('scroll', textTransition)
            </video> 
            {/* <p style={{background:'red'}}>{videos[currentVideo]}</p> */}
            <div className='buttons'>
-               <button id="video1" onClick={(e)=>changeVideo(e)}></button>
-               <button id="video2" onClick={(e)=>changeVideo(e)}></button>
-               <button id="video3" onClick={(e)=>changeVideo(e)}></button>
+               <button id="video1" onClick={()=>setCurrentVideo(0)}></button>
+               <button id="video2" onClick={()=>setCurrentVideo(1)}></button>
+               <button id="video3" onClick={()=>setCurrentVideo(2)}></button>
            </div>
         </div>
     )
