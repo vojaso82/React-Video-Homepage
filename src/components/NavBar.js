@@ -10,6 +10,8 @@ function NavBar(props) {
 
 const [navbar, setNavbar] = useState(false)
 const [toggle, setToggle] = useState(false);
+const [menu, setMenu] = useState(false);
+const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
 //FRAMER MOTION
 const animateFrom = {opacity:0, y:-50}
@@ -25,16 +27,28 @@ if(window.scrollY >= 60 && window.innerWidth > 800){
 }
  }
 
+ const handleResize = () => {
+  setWindowWidth(window.innerWidth);
+  handleToggle();
+};
+
  const handleToggle = () => {
-    if (window.innerWidth < 800) {
+    if (window.innerWidth <= 800) {
       setToggle(false);
   
     }
-    if (window.innerWidth >= 800) {
+    if (window.innerWidth > 800) {
       setToggle(true);
       
     }
   };
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleToggle);
+    return () => window.removeEventListener("resize", handleToggle);;
+  }, [window.innerWidth]);
+
 
   const handleBurgerMenu = () => {
       if(window.innerWidth < 800){
@@ -43,11 +57,6 @@ if(window.scrollY >= 60 && window.innerWidth > 800){
           setToggle(true)
       }
   }
-  const downMenuAnimation = useSpring({
-    opacity: toggle ? 1 : 0,
-    transform: toggle ? `translateY(0)` : `translateY(100%)`
-  });
-
 
 
 window.addEventListener('scroll', navbarColorChange)
@@ -67,6 +76,7 @@ console.log(navbar)
             <HashLink smooth to={'/#home'} className="logo">
                 <img src={MiamiLogo} style={{width:'180px'}} />
             </HashLink>
+            {toggle && (
             <ul style={toggle ? {height:'500%',transition:'all 0.3s ease-in-out' } : {height:'0%', transition:'all 0.3s ease-in-out'}}>
         
                 <motion.li 
@@ -107,7 +117,7 @@ console.log(navbar)
                 </motion.li>
                 
             </ul>
-             
+             )}
         </nav>
     )
 }
