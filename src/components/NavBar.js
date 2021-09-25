@@ -3,11 +3,13 @@ import './NavBar.css'
 import { HashLink } from 'react-router-hash-link';
 import MiamiLogo from './MiamiLogo2.png';
 import { motion } from 'framer-motion';
+import { useSpring, animated } from 'react-spring';
+
 
 function NavBar(props) {
 
 const [navbar, setNavbar] = useState(false)
-const [toggle, setToggle] = useState(true);
+const [toggle, setToggle] = useState(false);
 
 //FRAMER MOTION
 const animateFrom = {opacity:0, y:-50}
@@ -41,6 +43,12 @@ if(window.scrollY >= 60 && window.innerWidth > 800){
           setToggle(true)
       }
   }
+  const downMenuAnimation = useSpring({
+    opacity: toggle ? 1 : 0,
+    transform: toggle ? `translateY(0)` : `translateY(100%)`
+  });
+
+
 
 window.addEventListener('scroll', navbarColorChange)
 window.addEventListener('resize', handleToggle)
@@ -59,8 +67,7 @@ console.log(navbar)
             <HashLink smooth to={'/#home'} className="logo">
                 <img src={MiamiLogo} style={{width:'180px'}} />
             </HashLink>
-            
-            <ul style={toggle ? {display:'flex'} : {display:'none'}}>
+            <ul style={toggle ? {height:'500%',transition:'all 0.3s ease-in-out' } : {height:'0%', transition:'all 0.3s ease-in-out'}}>
         
                 <motion.li 
                 
@@ -68,7 +75,7 @@ console.log(navbar)
                 animate={animateTo}
                 transition={{delay:0.05}}
                 onClick={()=>handleBurgerMenu()}
-                className='links'>
+                className='links' id='homelink'> 
                 <HashLink smooth to={'/#home'}>HOME</HashLink>
                 </motion.li>
                 
@@ -100,6 +107,7 @@ console.log(navbar)
                 </motion.li>
                 
             </ul>
+             
         </nav>
     )
 }
