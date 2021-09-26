@@ -53,10 +53,10 @@ window.addEventListener('scroll', textTransition)
         <div className='slide-items'>
             <div className='miamipicture1' style={{transform:`translateX(${(scroll-1000)}px)`, transition:'all 0.1s linear'}}>
                 {/* {console.log(scroll)} */}
-                <img src={MiamiCity2} width={'340px'}></img>
+                <img src={MiamiCity2}></img>
             </div>
             <div className='miamipicture2' style={{transform:`translateX(${(1000-scroll)}px)`, transition:'all 0.1s linear'}}>
-              <img src={MiamiCity} width={'350px'}></img>
+              <img src={MiamiCity}></img>
             </div>
         </div>
         </div>

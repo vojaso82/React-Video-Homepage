@@ -98,11 +98,18 @@ justify-content: center;
     align-items: center;
     justify-self: center;
 }
+.miamipicture1 img{
+    width:340px;
+}
 
+.miamipicture2 img{
+    width:350px;
+}
 
 .miamipicture2{
 position:relative;
 padding-top:10px;
+
 
 }
 
@@ -114,4 +121,24 @@ padding-top:10px;
         font-size: 15px;
         max-width:430px;
     }
+}
+
+@media(max-width:800px){
+    .miamipicture1 img{
+        width:300px;
+    }
+    .miamipicture2 img{
+        width:300px;
+    }
+
+}
+
+@media(max-width:600px){
+    .miamipicture1 img{
+        width:190px;
+    }
+    .miamipicture2 img{
+        width:190px;
+    }
+
 }
