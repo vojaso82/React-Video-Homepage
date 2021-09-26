@@ -47,9 +47,9 @@ console.log(onscroll, window.scrollY)
             
             <div className='google-map-div'>
             <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=701%20S%20Miami%20Ave,%20Miami,%20FL%2033131+()&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-                     
-             ></iframe>
+            ></iframe>
             </div>
+            
             <div className='informations'>
                 <h2>MIAMI CITY ADMINISTRATION</h2>
                 <p>701 S Miami Ave, Miami, FL 33131</p>

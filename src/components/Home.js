@@ -43,7 +43,7 @@ if(e.target.id === 'video1'){
 }else if(e.target.id === 'video3'){
     setCurrentVideo(2)
 }
-// console.log(e.target.id)
+console.log(e.target.id)
 }
 
 //TEXT TRANSITION
@@ -72,9 +72,9 @@ window.addEventListener('scroll', textTransition)
            </video> 
            {/* <p style={{background:'red'}}>{videos[currentVideo]}</p> */}
            <div className='buttons'>
-               <button id="video1" onClick={()=>setCurrentVideo(0)}></button>
-               <button id="video2" onClick={()=>setCurrentVideo(1)}></button>
-               <button id="video3" onClick={()=>setCurrentVideo(2)}></button>
+               <button id="video1" onClick={(e)=>setCurrentVideo(0)}></button>
+               <button id="video2" onClick={(e)=>setCurrentVideo(1)}></button>
+               <button id="video3" onClick={(e)=>setCurrentVideo(2)}></button>
            </div>
         </div>
     )

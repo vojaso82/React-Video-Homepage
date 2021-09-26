@@ -67,7 +67,7 @@ flex-wrap: wrap;
     transition: all 1s ease-in-out 0.7s;  
 }
 
-@media(max-width:750px){
+@media(max-width:800px){
     .services h1{
         font-size: 60px;
     }
@@ -75,7 +75,7 @@ flex-wrap: wrap;
         font-size: 12px;
         }
     .all-services{
-        width:85%;
+        width:95%;
         height:69%;
         
     

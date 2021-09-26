@@ -116,3 +116,29 @@ opacity: 0;
 #letter10{
     transition: all 1s ease-in-out 0.8s;  
 }
+
+
+@media(max-width:700px){
+    .getintouch{
+        font-size: 65px;
+        min-width:400px;
+    }
+   
+}
+
+
+@media(max-width:600px){
+    .getintouch{
+        font-size: 50px;
+        min-width:400px;
+    }
+    .informations h2{
+        font-size: 15px;
+    }
+    .informations p,a{
+        font-size: 12px;
+    }
+    .google-map-div{
+        min-width:60%;
+    }
+}
