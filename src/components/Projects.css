@@ -66,3 +66,25 @@ flex-wrap: wrap;
 #box6{
     transition: all 1s ease-in-out 0.7s;  
 }
+
+@media(max-width:750px){
+    .services h1{
+        font-size: 60px;
+    }
+    .services p{
+        font-size: 12px;
+        }
+    .all-services{
+        width:85%;
+        height:69%;
+        
+    
+        }
+    .box-slide{
+        flex-direction: column;
+        justify-content: center;   
+    }
+    .box-slide p{
+        font-size: 12px;
+    }
+}
