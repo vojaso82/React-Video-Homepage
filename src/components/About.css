@@ -18,13 +18,19 @@ font-size: 40px;
 display: flex;
 flex-direction: column;
 align-items: center;
-width:37%;
+/* width:37%; */
 height:40%;
 opacity:1;
 transform:translateY(-10%);
 transition: all 1.5s ease-in-out;
+/* min-width:500px; */
 }
 
+.miami-h1 p{
+    width:600px;
+    text-align: center;
+    font-size: 18px;
+}
 
 .miami-2{
 transform:translateY(90%);
@@ -87,7 +93,6 @@ justify-content: center;
 }
 
 .miami-about{
-    background-color: burlywood;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -99,4 +104,14 @@ justify-content: center;
 position:relative;
 padding-top:10px;
 
+}
+
+@media(max-width:800px){
+    .miami-h1 h1{
+      font-size: 55px;
+    } 
+    .miami-h1 p{
+        font-size: 15px;
+        max-width:430px;
+    }
 }
