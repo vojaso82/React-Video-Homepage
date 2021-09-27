@@ -11,53 +11,31 @@ function Home() {
 const [videos, setVideos] = useState(videoArray);
 const [currentVideo, setCurrentVideo] = useState(0);
 const [changetext, setChangeText] = useState(false)
-// const videoRef = useRef(null);
- 
-  
+const [videoAnimation, setVideoAnimation] = useState(false)
 
+ //CHANGE VIDEO ON BUTTON CLICK
 function playVideo(source) {
-   let video = document.getElementById('player')
-    video.src= source
+    let video = document.getElementById('player');
+    video.src= source;
     video.load();
     video.play();
 }  
-// console.log(document.getElementById('player'))
-// function playVideo2() {
-//      Miami2.play();
-// }  
 
-// function playVideo3() {
-//      Miami3.play();
-// } 
-
-// console.log(videoRef)
-
-// http://localhost:3000/static/media/Miami3.7cab7547.mp4
 
 //CHANGE VIDEOS FROM ARRAY EVERY 5 SECONDS
 useEffect( () => {
     const interval = setInterval(() => {   
-      setCurrentVideo(currentVideo => (currentVideo+1)%videos.length)
+        setCurrentVideo(currentVideo => (currentVideo+1)%videos.length)
+        let video = document.getElementById('player');
+        video.src= videos[currentVideo];
+        video.load();
+        video.play();
+        
+        console.log(currentVideo)
+    }, 12000);
     
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [videos]);
-
-
-
-//PLAY NEXT VIDEO ON CLICK
-const changeVideo = (e) => {
-if(e.target.id === 'video1'){
-    setCurrentVideo(0)
-}else if(e.target.id === 'video2'){
-    setCurrentVideo(1)
-}else if(e.target.id === 'video3'){
-    setCurrentVideo(2)
-}
-
-console.log(e.target.id)
-}
+    return () => clearInterval(interval); 
+  }, [currentVideo]);
 
 //TEXT TRANSITION
 const textTransition = () => {
@@ -70,7 +48,7 @@ const textTransition = () => {
 window.addEventListener('scroll', textTransition)
 
 
-console.log(videos[currentVideo])
+// console.log(videos[currentVideo])
 
     return (
         
@@ -80,7 +58,7 @@ console.log(videos[currentVideo])
         {/* <h2 className={changetext ? 'text-transition2' : 'text-transition4'}>MAGIC CITY</h2>  */}
         </div>
         <video id="player" autoPlay loop muted className="video">
-            <source src={videos[currentVideo]} type='video/mp4' />
+            <source id="source1" src={videos[currentVideo]} type='video/mp4' />
            </video> 
            {/* <p style={{background:'red'}}>{videos[currentVideo]}</p> */}
            <div className='buttons'>

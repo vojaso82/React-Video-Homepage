@@ -16,7 +16,11 @@ font-size: 80px;
 font-weight: 900;
 position:relative;
 z-index: 1;
+}
 
+#source1{
+ transform:translateY(-100%);
+ transition:all 1s ease;
 }
 
 .home-div h1{
