@@ -27,12 +27,13 @@ const [changetext, setChangeText] = useState(false)
 useEffect( () => {
 
     const interval = setInterval(() => {   
-      setCurrentVideo(currentVideo => (currentVideo+1)%videos.length)  
+      setCurrentVideo(currentVideo => (currentVideo+1)%videos.length)
+    
     }, 5000);
     return () => clearInterval(interval);
   }, [videos]);
 
-//   console.log(videos[currentVideo])
+
 
 //PLAY NEXT VIDEO ON CLICK
 const changeVideo = (e) => {
@@ -43,6 +44,7 @@ if(e.target.id === 'video1'){
 }else if(e.target.id === 'video3'){
     setCurrentVideo(2)
 }
+
 console.log(e.target.id)
 }
 
@@ -57,8 +59,7 @@ const textTransition = () => {
 window.addEventListener('scroll', textTransition)
 
 
-
-
+console.log(videos[currentVideo])
 
     return (
         
@@ -72,9 +73,9 @@ window.addEventListener('scroll', textTransition)
            </video> 
            {/* <p style={{background:'red'}}>{videos[currentVideo]}</p> */}
            <div className='buttons'>
-               <button id="video1" onClick={(e)=>setCurrentVideo(0)}></button>
-               <button id="video2" onClick={(e)=>setCurrentVideo(1)}></button>
-               <button id="video3" onClick={(e)=>setCurrentVideo(2)}></button>
+               <button id="video1" onClick={(e)=>changeVideo(e)}></button>
+               <button id="video2" onClick={(e)=>changeVideo(e)}></button>
+               <button id="video3" onClick={(e)=>changeVideo(e)}></button>
            </div>
         </div>
     )

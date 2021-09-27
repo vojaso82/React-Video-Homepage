@@ -62,7 +62,7 @@ if(window.scrollY >= 60 && window.innerWidth > 800){
 window.addEventListener('scroll', navbarColorChange)
 window.addEventListener('resize', handleToggle)
 
-console.log(navbar)
+// console.log(navbar)
 
     return (
         <nav className={navbar ? 'navbar-color navbar-div' : 'navbar-div'}>

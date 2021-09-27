@@ -24,7 +24,7 @@ useEffect (() => {
      }
  },[])
  window.addEventListener('scroll', handleScroll)
-console.log(onscroll, window.scrollY)
+// console.log(onscroll, window.scrollY)
 
 
     return (

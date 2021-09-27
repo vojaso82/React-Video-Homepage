@@ -46,8 +46,8 @@ window.addEventListener('scroll', textTransition)
             <p>The city of Miami is well known for beaches such as Miami Beach and South Beach.<br/>
              As a result, the metropolitan area of Miami, are great places for water sports or simply building sandcastles.</p>
              <div className='buttons-about'>
-                 <button>Miami history</button>
-                 <button>Get in touch</button>
+                 <button>History</button>
+                 <button>About us</button>
              </div>
         </div>
         <div className='slide-items'>
