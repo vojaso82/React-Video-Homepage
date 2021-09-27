@@ -11,13 +11,24 @@ function Home() {
 const [videos, setVideos] = useState(videoArray);
 const [currentVideo, setCurrentVideo] = useState(0);
 const [changetext, setChangeText] = useState(false)
-
 // const videoRef = useRef(null);
+ 
+  
 
-// function playVideo() {
-//     videoRef.current.currentSrc = 'http://localhost:3000/static/media/Miami3.7cab7547.mp4'
-//     videoRef.current.play();
+function playVideo(source) {
+   let video = document.getElementById('player')
+    video.src= source
+    video.load();
+    video.play();
+}  
+// console.log(document.getElementById('player'))
+// function playVideo2() {
+//      Miami2.play();
 // }  
+
+// function playVideo3() {
+//      Miami3.play();
+// } 
 
 // console.log(videoRef)
 
@@ -25,11 +36,11 @@ const [changetext, setChangeText] = useState(false)
 
 //CHANGE VIDEOS FROM ARRAY EVERY 5 SECONDS
 useEffect( () => {
-
     const interval = setInterval(() => {   
       setCurrentVideo(currentVideo => (currentVideo+1)%videos.length)
     
     }, 5000);
+
     return () => clearInterval(interval);
   }, [videos]);
 
@@ -68,14 +79,14 @@ console.log(videos[currentVideo])
         <h1 className={changetext ? 'text-transition1' : 'text-transition3'}>WELCOME. TO. MIAMI.</h1>
         {/* <h2 className={changetext ? 'text-transition2' : 'text-transition4'}>MAGIC CITY</h2>  */}
         </div>
-        <video autoPlay loop muted className="video">
+        <video id="player" autoPlay loop muted className="video">
             <source src={videos[currentVideo]} type='video/mp4' />
            </video> 
            {/* <p style={{background:'red'}}>{videos[currentVideo]}</p> */}
            <div className='buttons'>
-               <button id="video1" onClick={(e)=>changeVideo(e)}></button>
-               <button id="video2" onClick={(e)=>changeVideo(e)}></button>
-               <button id="video3" onClick={(e)=>changeVideo(e)}></button>
+               <button src={Miami} id="video1" onClick={()=>playVideo(Miami)}></button>
+               <button src={Miami2} id="video2" onClick={()=>playVideo(Miami2)}></button>
+               <button src={Miami3} id="video3" onClick={()=>playVideo(Miami3)}></button>
            </div>
         </div>
     )
