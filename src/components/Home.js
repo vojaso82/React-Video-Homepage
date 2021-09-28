@@ -12,16 +12,23 @@ const [videos, setVideos] = useState(videoArray);
 const [currentVideo, setCurrentVideo] = useState(0);
 const [changetext, setChangeText] = useState(false)
 const [videoAnimation, setVideoAnimation] = useState(false)
+const [button1color, setButton1color] = useState(false)
+const [button2color, setButton2color] = useState(false)
+const [button3color, setButton3color] = useState(false)
+
+
 
  //CHANGE VIDEO ON BUTTON CLICK
 function playVideo(source) {
+  
     let video = document.getElementById('player');
     video.src= source;
     video.load();
     video.play();
+    console.log(video.src)
 }  
 
-//CHANGE VIDEO
+//CHANGE VIDEO 
 useEffect(() => {
     const interval = setInterval(() => {   
         setCurrentVideo(currentVideo => (currentVideo+1)%videos.length)
@@ -60,7 +67,7 @@ window.addEventListener('scroll', textTransition)
         <video id="player" autoPlay loop muted className="video">
             <source id="source1" src={videos[currentVideo]} type='video/mp4' />
         </video> 
-        {/* <p style={{background:'red'}}>{videos[currentVideo]}</p> */}
+        <p style={{background:'red'}}>{videos[currentVideo]}</p>
            <div className='buttons'>
                <button
                style={currentVideo === 0 ? {backgroundColor:'orange'} : {backgroundColor:'white'}}
