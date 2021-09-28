@@ -21,19 +21,17 @@ function playVideo(source) {
     video.play();
 }  
 
-
-//CHANGE VIDEOS FROM ARRAY EVERY 5 SECONDS
-useEffect( () => {
+//CHANGE VIDEO
+useEffect(() => {
     const interval = setInterval(() => {   
         setCurrentVideo(currentVideo => (currentVideo+1)%videos.length)
         let video = document.getElementById('player');
         video.src= videos[currentVideo];
         video.load();
-        video.play();
-        
+        video.play();    
         console.log(currentVideo)
     }, 12000);
-    
+
     return () => clearInterval(interval); 
   }, [currentVideo]);
 
@@ -45,10 +43,12 @@ const textTransition = () => {
         setChangeText(false);
     }
      }   
+    
 window.addEventListener('scroll', textTransition)
 
 
-// console.log(videos[currentVideo])
+
+// console.log(currentVideo)
 
     return (
         
@@ -59,12 +59,29 @@ window.addEventListener('scroll', textTransition)
         </div>
         <video id="player" autoPlay loop muted className="video">
             <source id="source1" src={videos[currentVideo]} type='video/mp4' />
-           </video> 
-           {/* <p style={{background:'red'}}>{videos[currentVideo]}</p> */}
+        </video> 
+        {/* <p style={{background:'red'}}>{videos[currentVideo]}</p> */}
            <div className='buttons'>
-               <button src={Miami} id="video1" onClick={()=>playVideo(Miami)}></button>
-               <button src={Miami2} id="video2" onClick={()=>playVideo(Miami2)}></button>
-               <button src={Miami3} id="video3" onClick={()=>playVideo(Miami3)}></button>
+               <button
+               style={currentVideo === 0 ? {backgroundColor:'orange'} : {backgroundColor:'white'}}
+               src={Miami}
+               id="video1"
+               onClick={()=>playVideo(Miami)}>
+               </button>
+
+               <button
+                style={currentVideo === 1 ? {backgroundColor:'orange'} : {backgroundColor:'white'}}
+                src={Miami2}
+                id="video2"
+                onClick={()=>playVideo(Miami2)}>
+                </button>
+
+               <button
+                style={currentVideo === 2 ? {backgroundColor:'orange'} : {backgroundColor:'white'}}
+                src={Miami3}
+                id="video3"
+                onClick={()=>playVideo(Miami3)}>
+                </button>
            </div>
         </div>
     )
