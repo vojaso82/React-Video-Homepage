@@ -48,9 +48,11 @@ const textTransition = () => {
         setChangeText(false);
     }
      }   
-    
+ 
+     
 window.addEventListener('scroll', textTransition)
 
+console.log('click')
 
 
  console.log(currentVideo)
