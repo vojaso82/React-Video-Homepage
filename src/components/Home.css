@@ -19,8 +19,7 @@ z-index: 1;
 }
 
 #player{
- transition:all 2s ease;
- 
+ transition: opacity 1s ease-in-out;
 }
 
 .home-div h1{

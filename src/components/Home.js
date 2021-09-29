@@ -14,18 +14,17 @@ const [changetext, setChangeText] = useState(false)
 const [videoAnimation, setVideoAnimation] = useState(false)
 const [button1color, setButton1color] = useState(false)
 const [button2color, setButton2color] = useState(false)
-const [button3color, setButton3color] = useState(false)
+
 
 
 
  //CHANGE VIDEO ON BUTTON CLICK
-function playVideo(source) {
-  
+function playVideo(source) { 
     let video = document.getElementById('player');
     video.src= source;
     video.load();
     video.play();
-    console.log(video.src)
+    // console.log(video.src)
 }  
 
 //CHANGE VIDEO 
@@ -35,8 +34,7 @@ useEffect(() => {
         let video = document.getElementById('player');
         video.src= videos[currentVideo];
         video.load();
-        video.play();    
-        console.log(currentVideo)
+        video.play();  
     }, 12000);
 
     return () => clearInterval(interval); 
@@ -55,7 +53,7 @@ window.addEventListener('scroll', textTransition)
 
 
 
-// console.log(currentVideo)
+ console.log(currentVideo)
 
     return (
         
@@ -64,7 +62,7 @@ window.addEventListener('scroll', textTransition)
         <h1 className={changetext ? 'text-transition1' : 'text-transition3'}>WELCOME. TO. MIAMI.</h1>
         {/* <h2 className={changetext ? 'text-transition2' : 'text-transition4'}>MAGIC CITY</h2>  */}
         </div>
-        <video id="player" autoPlay loop muted className="video">
+        <video style={currentVideo === 0 ? {transition:'transformX(-100px)'} : {transition: "opacity 2s ease-in-out"}} id="player" autoPlay loop muted className="video">
             <source id="source1" src={videos[currentVideo]} type='video/mp4' />
         </video> 
         <p style={{background:'red'}}>{videos[currentVideo]}</p>
