@@ -48,9 +48,11 @@ font-weight: 900;
 .buttons-about{
     display:flex;
     justify-content: space-around;
+    align-items: center;
     width:300px;
     height:40px;
-    margin-top:10px;
+    
+    /* margin-top:10px; */
 }
 
 .buttons-about button{
@@ -63,6 +65,7 @@ font-weight: 900;
     font-size: 15px;
     font-weight: 500;
     border:1px solid;
+    
 
 }
 
@@ -71,6 +74,10 @@ font-weight: 900;
  background-color: rgb(255, 255, 255);
  color:black;
  transition: all 0.1s ease-in-out;
+}
+
+#history-button{
+    all:unset;
 }
 
 .so-miami{
