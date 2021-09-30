@@ -33,6 +33,8 @@ min-width:400px;
 .navbar-div a{
 color:rgb(29, 29, 29);
 text-decoration: none;
+font-weight: 600;
+font-size:17px;
 }
 
 .navbar-div a:hover{

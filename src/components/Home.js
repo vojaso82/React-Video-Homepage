@@ -16,8 +16,6 @@ const [button1color, setButton1color] = useState(false)
 const [button2color, setButton2color] = useState(false)
 
 
-
-
  //CHANGE VIDEO ON BUTTON CLICK
 function playVideo(source) { 
     let video = document.getElementById('player');
@@ -26,6 +24,12 @@ function playVideo(source) {
     video.play();
     // console.log(video.src)
 }  
+
+function changeButtonColor(){
+    console.log(button1color)
+}
+
+
 
 //CHANGE VIDEO 
 useEffect(() => {
@@ -52,7 +56,7 @@ const textTransition = () => {
      
 window.addEventListener('scroll', textTransition)
 
-console.log('click')
+
 
 
  console.log(currentVideo)
