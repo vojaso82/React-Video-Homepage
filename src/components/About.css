@@ -150,3 +150,13 @@ padding-top:10px;
     }
 
 }
+
+@media(max-width:450px){
+    .miamipicture1 img{
+        width:190px;
+    }
+    .miamipicture2 img{
+        width:190px;
+    }
+
+}
