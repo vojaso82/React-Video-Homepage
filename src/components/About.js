@@ -44,7 +44,7 @@ window.addEventListener('scroll', textTransition)
         <div className={miamiabout ? 'miami-h1' : 'miami-2 miami-h1'}>
             <h1>MIAMI ABOUT</h1>
             <p>The city of Miami is well known for beaches such as Miami Beach and South Beach.<br/>
-             As a result, the metropolitan area of Miami, are great places for water sports or simply building sandcastles.</p>
+             As a result, the metropolitan area of Miami</p>
              <div className='buttons-about'>
              <a className="history-button" href="https://www.linkedin.com/in/vojislav-zaja/" target="_blank">
                  <button> 
